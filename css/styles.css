@@ -202,6 +202,10 @@ nav h1 a {
   justify-content: space-between;
 }
 
+#restaurants-list li a:focus,.filter-options select:focus{
+  border: solid 4px #f18200;
+}
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
