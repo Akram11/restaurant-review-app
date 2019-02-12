@@ -35,7 +35,7 @@ self.addEventListener('activate', event => {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
           return cacheName.startsWith('restaurant-review-app-') &&
-                 cacheName != staticCacheName;
+            cacheName != staticCacheName;
         }).map(function(cacheName) {
           return caches.delete(cacheName);
         })
@@ -46,10 +46,22 @@ self.addEventListener('activate', event => {
 
 
 self.addEventListener('fetch', event => {
-   console.log(event.request.url);
+  console.log(event.request.url);
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
+      // return response || fetch(event.request);
+      if (response) {
+        return response;
+      } else {
+        return fetch(event.request).then(function(response) {
+          let responseClone = response.clone();
+          caches.open(staticCacheName).then(function(cache) {
+            cache.put(event.request, responseClone);
+          });
+          return response;
+        });
+      }
+
     })
   );
 });
