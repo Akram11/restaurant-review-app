@@ -1,10 +1,8 @@
-# Mobile Web Specialist Certification Course
+#Udacity Front-end final project
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
-
-## Project Overview: Stage 1
-
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Description
+ **Restaurant Reviews** project, is a responsive web application that list restaurants and show a map of their locations. it allows users to filter the restaurants list by location and cuisine.
+ it also shows information and reviews for every restaurant. 
 
 ### Specification
 

@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-review-app-v2';
+var staticCacheName = 'restaurant-review-app-v3';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -29,7 +29,7 @@ self.addEventListener('install', function(event) {
 });
 
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
@@ -45,7 +45,7 @@ self.addEventListener('activate', function(event) {
 });
 
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
    console.log(event.request.url);
   event.respondWith(
     caches.match(event.request).then(function(response) {
