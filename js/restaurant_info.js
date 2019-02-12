@@ -83,7 +83,6 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
   name.setAttribute('aria-label', `${restaurant.name}`);
-  name.tabIndex = '1';
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -96,7 +95,6 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
   cuisine.setAttribute('aria-label', `${restaurant.cuisine_type}`);
-  cuisine.tabIndex = '1';
 
   // fill operating hours
   if (restaurant.operating_hours) {
