@@ -1,4 +1,4 @@
-var staticCacheName = 'restaurant-review-app-v3';
+var staticCacheName = 'restaurant-review-app-v4';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(

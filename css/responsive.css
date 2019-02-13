@@ -45,7 +45,7 @@
 @media screen and (min-width: 900px) {
 
 	body, .inside {
-		width: 100vw;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -53,5 +53,21 @@
 	#restaurants-list li {
 	  max-width: 25%;
 	}
+
+
+
+	table {
+    display: table;
+		width: 80%;
+    border-spacing: 4px;
+  }
+
+#restaurant-hours td {
+  	font-size: 1.2em;
+}
+
+#reviews-list li>p:nth-child(4) {
+    font-size: 1.2em;
+}
 
 }

@@ -254,11 +254,11 @@ nav h1 a {
 .inside {
   padding: 3px 3px;
   background-color: #252831;
-
-
+  margin: auto;
+  height: auto;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
-  overflow-x: hidden !important;
 }
 
 .inside #map-container {
